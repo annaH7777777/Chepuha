@@ -14,46 +14,19 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Debug.Log(inputFields[0].GetComponent<Text>());
-        //inputFields[0].onValueChanged.AddListener(delegate { ValueChangeCheck(); });
-        texts.Add("");
-        texts.Add("");
-        texts.Add("");
-        texts.Add("");
-        texts.Add("");
+        for (int i = 0; i < inputFields.Count; i++)
+            texts.Add("");
     }
-
-    private void ValueChangeCheck()
-    {
-        Debug.Log("Value Changed");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     public void OnTextEnter(Text text)
     {
         i = inputFields.IndexOf(text.gameObject);
-        Debug.Log("i is " + i);
-        //Debug.Log(inputFields[i].GetComponent<Text>());
-        Debug.Log(texts.Count);
-        //Debug.Log("texts i " + texts[i]);
-        //if (texts[i] == "0")
         texts.RemoveAt(i);
         texts.Insert(i, inputFields[i].GetComponent<Text>().text);
-        //else
-        //{
-        //    //texts.RemoveAt(i);
-        //    texts.Insert(i, inputFields[i].GetComponent<Text>().text);
-        //}
-
         if (!texts.Contains(""))
         {
             SetFinishText();
         }
-        //i++;
     }
 
     private void SetFinishText()
@@ -65,6 +38,5 @@ public class GameManager : MonoBehaviour
             finalTextString += " ";
         }
         finalText.text = finalTextString;
-
     }
 }
