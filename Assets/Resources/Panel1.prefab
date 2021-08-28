@@ -325,9 +325,10 @@ GameObject:
   - component: {fileID: 2627112207019002751}
   - component: {fileID: 256049447564049317}
   - component: {fileID: 2312322378715703281}
+  - component: {fileID: 3889980180037006682}
   m_Layer: 5
   m_Name: Button 1
-  m_TagString: Untagged
+  m_TagString: 1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -464,6 +465,18 @@ MonoBehaviour:
     _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
     _objectReferences:
     - {fileID: 11400000, guid: 3acb53b9f9b2e2e4291898b5109250a6, type: 2}
+--- !u!114 &3889980180037006682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3380083812699265974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a38987f14e1fff468d309acf92f5755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6317576599881987777
 GameObject:
   m_ObjectHideFlags: 0

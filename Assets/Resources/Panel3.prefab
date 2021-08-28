@@ -388,7 +388,7 @@ GameObject:
   - component: {fileID: 1977049886851872931}
   m_Layer: 5
   m_Name: Panel3
-  m_TagString: Untagged
+  m_TagString: 3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -546,7 +546,7 @@ GameObject:
   - component: {fileID: 8121474513687896055}
   m_Layer: 5
   m_Name: Button 3
-  m_TagString: Untagged
+  m_TagString: 3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
