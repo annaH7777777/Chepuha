@@ -15,7 +15,8 @@ public class PhotonServer : MonoBehaviour
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
-        PhotonNetwork.ConnectUsingSettings();   
+        PhotonNetwork.ConnectUsingSettings();
+        //PhotonNetwork.OnConnectedToMaster += JoinRoom;
     }
 
     // Update is called once per frame
@@ -24,7 +25,7 @@ public class PhotonServer : MonoBehaviour
         
     }
 
-    private void OnConnectedToMaster()
+    private void JoinRoom()
     {
         PhotonNetwork.JoinOrCreateRoom("Room 1", new RoomOptions(), null, null);
     }
