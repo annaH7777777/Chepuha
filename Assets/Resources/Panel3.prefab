@@ -232,8 +232,8 @@ GameObject:
   - component: {fileID: 6715523129490411170}
   - component: {fileID: 6517333945211436415}
   - component: {fileID: 9046310596703980965}
-  - component: {fileID: 6778019558601052657}
   - component: {fileID: 5475431903449547610}
+  - component: {fileID: 1255996233401437415}
   m_Layer: 5
   m_Name: Button 1
   m_TagString: 3
@@ -357,22 +357,6 @@ MonoBehaviour:
     _json: '{"declarations":{"collection":{"$content":[{"name":"text","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 5672134106465757689}
---- !u!114 &6778019558601052657
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5831915514408283574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -57143145, guid: a040fb66244a7f54289914d98ea4ef7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _data:
-    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
-    _objectReferences:
-    - {fileID: 11400000, guid: 3acb53b9f9b2e2e4291898b5109250a6, type: 2}
 --- !u!114 &5475431903449547610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,6 +369,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a38987f14e1fff468d309acf92f5755, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1255996233401437415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5831915514408283574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d8558e828c6bcc479ab32327c03cdd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 5672134106465757689}
 --- !u!1 &6575072408925455106
 GameObject:
   m_ObjectHideFlags: 0

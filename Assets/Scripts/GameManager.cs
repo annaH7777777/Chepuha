@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public List<GameObject> inputFields;
+    //public List<GameObject> inputFields;
+    public int playerCount = 2;
     public List<String> texts = new List<String>();
     public Text finalText;
     int i = 0;
@@ -14,15 +15,15 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < inputFields.Count; i++)
+        for (int i = 0; i < playerCount; i++)
             texts.Add("");
     }
     
-    public void OnTextEnter(Text text)
+    public void OnTextEnter(String text, int buttonNum)
     {
-        i = inputFields.IndexOf(text.gameObject);
-        texts.RemoveAt(i);
-        texts.Insert(i, inputFields[i].GetComponent<Text>().text);
+        //i = inputFields.IndexOf(text.gameObject);
+        texts.RemoveAt(buttonNum);
+        texts.Insert(i, text);
         if (!texts.Contains(""))
         {
             SetFinishText();
