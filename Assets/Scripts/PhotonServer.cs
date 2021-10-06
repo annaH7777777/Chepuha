@@ -4,7 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 
-public class PhotonServer : MonoBehaviour
+public class PhotonServer : MonoBehaviourPunCallbacks
 {
     GameManager gameManager;
     int prefabIndex = 0;
@@ -25,12 +25,12 @@ public class PhotonServer : MonoBehaviour
         
     }
 
-    private void JoinRoom()
+    public override void OnConnectedToMaster()
     {
         PhotonNetwork.JoinOrCreateRoom("Room 1", new RoomOptions(), null, null);
     }
 
-    private void OnJoinedRoom()
+    public override void OnJoinedRoom()
     {
         prefabIndex = PhotonNetwork.CountOfPlayersInRooms + 1;
         OnEpisodeActivation(prefabIndex);

@@ -232,7 +232,6 @@ GameObject:
   - component: {fileID: 6715523129490411170}
   - component: {fileID: 6517333945211436415}
   - component: {fileID: 9046310596703980965}
-  - component: {fileID: 5475431903449547610}
   - component: {fileID: 1255996233401437415}
   m_Layer: 5
   m_Name: Button 1
@@ -340,7 +339,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6715523129490411170}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1255996233401437415}
+        m_MethodName: OnTextEnter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &9046310596703980965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -357,18 +367,6 @@ MonoBehaviour:
     _json: '{"declarations":{"collection":{"$content":[{"name":"text","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 5672134106465757689}
---- !u!114 &5475431903449547610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5831915514408283574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a38987f14e1fff468d309acf92f5755, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1255996233401437415
 MonoBehaviour:
   m_ObjectHideFlags: 0
