@@ -28,11 +28,20 @@ public class PhotonServer : MonoBehaviourPunCallbacks
     public override void OnConnectedToMaster()
     {
         PhotonNetwork.JoinOrCreateRoom("Room 1", new RoomOptions(), null, null);
+        Debug.Log("On connected to master");
     }
 
-    public override void OnJoinedRoom()
+    [PunRPC]
+    private void IncreacePlayersCount()
     {
         prefabIndex = PhotonNetwork.CountOfPlayersInRooms + 1;
+        //prefabIndex = PhotonNetwork.CurrentRoom.PlayerCount + 1;
+        Debug.Log("players " + prefabIndex);
+    }
+    public override void OnJoinedRoom()
+    {
+        IncreacePlayersCount();
         OnEpisodeActivation(prefabIndex);
+        Debug.Log("On joined room " + prefabIndex);
     }
 }

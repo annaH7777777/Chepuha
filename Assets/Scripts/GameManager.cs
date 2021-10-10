@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
+using Photon.Realtime;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,11 +21,12 @@ public class GameManager : MonoBehaviour
             texts.Add("");
     }
     
+    [PunRPC]
     public void OnTextEnter(String text, int buttonNum)
     {
         //i = inputFields.IndexOf(text.gameObject);
         texts.RemoveAt(buttonNum);
-        texts.Insert(i, text);
+        texts.Insert(buttonNum, text);
         if (!texts.Contains(""))
         {
             SetFinishText();
